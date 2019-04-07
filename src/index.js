@@ -1,7 +1,7 @@
 var $ = require('jquery')
 
-console.log("Hello World!");
+console.log("JS is loaded (:");
 
 $(document).ready(() => {
-  console.log("jQuery works :)");
+  console.log("jQuery is loaded (:");
 })

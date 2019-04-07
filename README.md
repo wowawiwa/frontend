@@ -8,18 +8,17 @@ In the repository root directory:
 ```sh
 npm install
 npm run dev
-
 ```
 
 ## Choices
 
 Intended is to take the **most standard tooling** at the time of writing.
 
-- `Webpack`: Is the *run time*. It 1) serves the files on `http://localhost:8080`, but also 2) orchestrates the whole pipeline to transform source files to servable files.
-- `NPM` as the CL interface, and to manage frontend packages. It's ran at *development time*: It downloads libraries and keeps track of their versions and dependencies (in `package.json` and `package-lock.json`).
-- `Babel` is a package that contains the logic to convert from ES5+ to more browser-compatible ES5.
+- `Webpack`: Is the "*runtime*": It 1) serves the files on `http://localhost:8080`, but also 2) orchestrates the pipeline to transform source files to servable files.
+- `npm` as 1) the CL interface and 2) to manage frontend packages (at *development time*): It downloads libraries and keeps track of their versions and dependencies (in `package.json` and `package-lock.json`).
+- `Babel` is a package that contains the logic to convert from ES5+ to browser-compatible ES5.
 
-More precisely, in `package.json`:
+More precisely, the dependencies in `package.json`:
 
 - `webpack` to bundle all the modules
 - `webpack-cli` to run webpack from cli
